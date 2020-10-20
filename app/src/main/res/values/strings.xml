@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NRWithChunkedResponses</string>
+    <string name="test_with_mock_server">Test with Mock Server</string>
+    <string name="test_with_real_server">Test with Real Server</string>
+    <string name="real_request_sent">Real request sent!</string>
+    <string name="mock_request_sent">Mock request sent!</string>
+</resources>
