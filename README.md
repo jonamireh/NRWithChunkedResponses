@@ -14,8 +14,8 @@ Before building, modify `configure.gradle` in the root project directory to incl
 1. Build the app with `./gradlew assembleDebug` or through Android Studio 4.0+
 2. Install the app on an emulator or physical device
 3. Open the app and tap on either "Test with Mock Server" or "Test with Real Server"
-3a. In Logcat, notice either option will return a response with header `Transfer-Encoding: chunked` and body `{"error":"invalid_request"}`
-3b. In Logcat, notice that the NewRelic agent will report `com.newrelic.android: OkHttp3TransactionStateUtil: Missing body or content length`
+    * In Logcat, notice either option will return a response with header `Transfer-Encoding: chunked` and body `{"error":"invalid_request"}`
+    * In Logcat, notice that the NewRelic agent will report `com.newrelic.android: OkHttp3TransactionStateUtil: Missing body or content length`
 4. Use your NewRelic Insights query builder with a statement like `FROM MobileRequestError SELECT device,requestUrl,responseBody`
-4a. Locate your app, device, and requestUrl (either `localhost` or `signin.mindbodyonline.com` for this project)
-4b. Notice the `responseBody` column is empty/null instead of `{"error":"invalid_request"}`
+    * Locate your app, device, and requestUrl (either `localhost` or `signin.mindbodyonline.com` for this project)
+    * Notice the `responseBody` column is empty/null instead of `{"error":"invalid_request"}`
