@@ -27,7 +27,7 @@ class MainViewModel : ViewModel() {
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            mockWebServer.start()
+            try { mockWebServer.start() } catch (e: IllegalStateException) { /* No way to query for started state */ }
         }
     }
 
